@@ -6,7 +6,9 @@ import MapPage from "./MapPage";
 import NotFoundPage from "./NotFoundPage";
 
 export default function AppRouter() {
-  const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
+  const isAuthenticated = useSelector(
+    (state) => state.auth.user.isAuthenticated
+  );
 
   return (
     <BrowserRouter>

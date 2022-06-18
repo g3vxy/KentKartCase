@@ -11,7 +11,7 @@ import "./index.scss";
 
 export default function AuthPage() {
   const { register, handleSubmit } = useForm();
-  const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.auth.user);
   const dispatch = useDispatch();
 
   const onSubmit = (data, event) => {
