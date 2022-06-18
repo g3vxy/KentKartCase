@@ -1,0 +1,9 @@
+.not-found {
+  &-page {
+    @apply h-screen w-screen bg-green-400;
+    @apply flex justify-center items-center;
+  }
+  &-title {
+    @apply text-4xl text-white;
+  }
+}

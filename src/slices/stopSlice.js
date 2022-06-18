@@ -1,19 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
+import stopsData from "../data/stops.json";
 
 const initialState = {
-  stops: [],
+  stops: stopsData,
 };
 
 export const stopSlice = createSlice({
   name: "stops",
   initialState,
-  reducers: {
-    setStops: (state, action) => {
-      state.stops = action.payload;
-    },
-  },
 });
-
-export const { setStops } = stopSlice.actions;
 
 export default stopSlice.reducer;
