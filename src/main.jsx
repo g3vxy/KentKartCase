@@ -1,10 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.scss'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+import { AuthStore, persistor } from "./stores/AuthStore";
+
+import AppRouter from "./pages/router";
+
+import "./index.scss";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <Provider store={AuthStore}>
+      <PersistGate loading={null} persistor={persistor}>
+        <AppRouter />
+      </PersistGate>
+    </Provider>
   </React.StrictMode>
-)
+);

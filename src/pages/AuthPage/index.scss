@@ -1,0 +1,35 @@
+.auth {
+  &-page {
+    @apply h-screen w-screen bg-green-400;
+    @apply flex justify-center items-center;
+  }
+
+  &-form-container {
+    @apply h-1/2 w-1/2 bg-green-200;
+    @apply flex justify-center items-center;
+    @apply flex-col;
+    @apply shadow-2xl;
+  }
+
+  &-input-container {
+    @apply w-full;
+    @apply flex flex-col gap-2;
+    @apply px-4 md:px-8 lg:px-16;
+    @apply mb-2;
+
+    label {
+      @apply text-black font-medium;
+    }
+
+    input {
+      @apply p-2 rounded;
+
+      &[type="submit"] {
+        @apply bg-gray-600 text-white shadow;
+        @apply hover:bg-gray-700 active:bg-gray-800;
+        @apply transition-all;
+        @apply cursor-pointer;
+      }
+    }
+  }
+}
