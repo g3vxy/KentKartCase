@@ -1,0 +1,13 @@
+header {
+  @apply w-full h-[10%] bg-blue-400;
+  @apply flex justify-between items-center;
+  @apply px-8;
+
+  h1 {
+    @apply text-white text-3xl;
+  }
+
+  button {
+    @apply text-white text-xl;
+  }
+}
